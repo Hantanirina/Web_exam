@@ -172,3 +172,93 @@ ul li a:hover {
   width: 15px;
   height: 15px;
 }
+#about {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 90vh;
+  margin-top: 5.7vw;
+}
+.aboutUs {
+  margin-top: 10vw;
+  width: 50vw;
+  margin-right: 7vw;
+  gap: 1vw;
+}
+.aboutUs h3 {
+  color: rgba(0, 0, 71, 0.815);
+}
+.citation {
+  margin-top: 30px;
+  height: 20vh;
+  width: 25vw;
+  padding: 33px 23px;
+  border: 2px solid green;
+}
+.plane {
+  height: 30px;
+  width: 30px;
+  margin-top: 20px;
+}
+.guids {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+.guids img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.container {
+  gap: 1vw;
+  margin-right: 45px;
+}
+.place1,
+.place2,
+.place3 {
+  border: 1px solid black;
+  height: 65vh;
+  width: 19vw;
+  border-radius: 10px;
+  /* margin-top: 30px; */
+  /* background-image: url("Landscape/canyon-2178786_1280.jpg"); */
+}
+.place2 {
+  margin-top: 15px;
+}
+.featurePlace h1 {
+  margin-top: 15px;
+  margin-right: 4vw;
+  color: rgba(0, 0, 71, 0.815);
+}
+.option {
+  margin-top: 20px;
+}
+.option p,
+.post p {
+  color: blue;
+  font-size: 13px;
+}
+.option img,
+.post img {
+  height: 9px;
+  width: 9px;
+  margin-left: 2px;
+}
+
+.heart {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+}
+.place {
+  margin-left: 13vw;
+  margin-top: 10px;
+}
+.place img {
+  width: 17px;
+  height: 17px;
+}
