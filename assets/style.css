@@ -188,12 +188,12 @@ ul li a:hover {
   height: 15px;
 }
 #about {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   height: 90vh;
   margin-top: 5.7vw;
+  background-color: rgba(0, 0, 0, 0.047);
 }
 .aboutUs {
   margin-top: 10vw;
@@ -209,7 +209,7 @@ ul li a:hover {
   height: 20vh;
   width: 25vw;
   padding: 33px 23px;
-  border: 2px solid green;
+  background-color: rgba(0, 0, 0, 0.047);
 }
 
 /* .indication P {
@@ -235,9 +235,9 @@ ul li a:hover {
   gap: 1vw;
   margin-right: 45px;
 }
-.place1,
-.place2,
-.place3 {
+.place1 img,
+.place2 img,
+.place3 img {
   border: 1px solid black;
   height: 65vh;
   width: 19vw;
@@ -271,23 +271,39 @@ ul li a:hover {
   height: 25px;
   align-items: center;
 }
-.place {
+/* .place {
   margin-left: 13vw;
   margin-top: 10px;
 }
 .place img {
   width: 17px;
   height: 17px;
-}
+} */
 #journal {
   display: flex;
   flex-direction: column;
   gap: 2vw;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.047);
 }
-
+.message {
+  margin-left: 33vw;
+  font-size: 15px;
+}
+.message h1 {
+  margin: 9px 15vw;
+}
+.message span {
+  margin-left: 55px;
+}
+.containts {
+  justify-content: space-evenly;
+}
+.yosemite {
+  gap: 1vw;
+}
 .yosemite img {
-  border: 1px solid black;
+  border: none;
   width: 450px;
   height: 350px;
   margin-left: 10px;
@@ -295,11 +311,17 @@ ul li a:hover {
 .yosemite span {
   margin-left: 35px;
 }
+.francisco {
+  gap: 1vw;
+}
 .francisco img {
-  border: 1px solid black;
+  border: none;
   width: 450px;
   height: 350px;
 }
 .francisco span {
   margin-left: 45px;
+}
+.post {
+  margin-left: 47vw;
 }
