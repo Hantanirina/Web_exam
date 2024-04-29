@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100%;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -31,6 +35,11 @@ nav {
   overflow: hidden;
   position: fixed;
   width: 100vw;
+}
+.menu {
+  width: 40px;
+  height: 40px;
+  display: none;
 }
 .title {
   font-size: 20px;
@@ -86,6 +95,35 @@ ul li a:hover {
   font-size: 14px;
   color: azure;
 }
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
+  .title {
+    font-size: 15px;
+  }
+  .title img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+  }
+  .menu {
+    display: flex;
+    margin-right: 4vw;
+  }
+  .search input {
+    width: 50%;
+    height: 50%;
+    display: none;
+  }
+  .search {
+    justify-content: flex-start;
+    width: 20vw;
+    display: none;
+  }
+}
+
 #heroSection {
   position: relative;
   display: flex;
@@ -100,12 +138,19 @@ ul li a:hover {
   background-image: url("../Landscape/boat-8614314_1280.png");
   background-size: cover;
 }
+@media screen and (max-width: 500px) {
+  #heroSection {
+    flex-direction: column;
+    top: 0;
+    height: 150vh;
+  }
+}
 .text,
 .text2 {
   display: flex;
   flex-direction: column;
   gap: 2vw;
-  padding: 75px 75px;
+  padding: 70px 87px;
 }
 #littleH1 {
   border-radius: 15px;
@@ -150,11 +195,51 @@ ul li a:hover {
 }
 .planning img {
   width: 12px;
-  height: 12x;
+  height: 12px;
   margin-left: 3px;
 }
 .planning:hover {
   transform: scale(1.1);
+}
+@media screen and (max-width: 500px) {
+  .text {
+    gap: 2vw;
+    padding: 80px 40px;
+  }
+  #littleH1 {
+    font-size: 15px;
+    width: 50vw;
+    height: 3vh;
+    background-color: transparent;
+  }
+  /* #littleH1 img {
+    width: 10px;
+    height: 10px;
+  } */
+  .text h1 img {
+    height: 34px;
+    width: 34px;
+  }
+  .text p {
+    font-size: 12px;
+  }
+  .text h1 {
+    font-size: 35px;
+  }
+
+  .planning {
+    font-size: 11px;
+    width: 23vw;
+    height: 4vh;
+    justify-content: center;
+  }
+  .planning img {
+    width: 10px;
+    height: 10px;
+  }
+  .text2 {
+    display: none;
+  }
 }
 .milieu {
   height: 350px;
@@ -165,9 +250,9 @@ ul li a:hover {
   gap: 1vw;
   padding-left: 10px;
 }
-.text2 h3 {
+/* .text2 h3 {
   color: rgba(0, 0, 71, 0.815);
-}
+} */
 .service img {
   width: 20px;
   height: 20px;
@@ -242,6 +327,34 @@ ul li a:hover {
   height: 65vh;
   width: 19vw;
   border-radius: 10px;
+  flex-shrink: 0;
+}
+.place1 {
+  display: flex;
+  overflow-x: hidden;
+  height: 65vh;
+  width: 19vw;
+  background-color: aqua;
+}
+@keyframes translation {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-19vw);
+  }
+  66.66% {
+    transform: translateX(-38vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.place1 img:hover {
+  animation: translation 2s infinite;
+}
+.place2:hover {
+  transform: scale(1.1);
 }
 .place2 {
   margin-top: 15px;
