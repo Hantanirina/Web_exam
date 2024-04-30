@@ -6,11 +6,9 @@
 body {
   width: 100%;
 }
-
 main {
   display: flex;
   flex-direction: column;
-  /* gap: 5.7vw; */
 }
 .colum {
   display: flex;
@@ -28,6 +26,7 @@ main {
 nav {
   background-color: rgb(123, 153, 160);
   display: flex;
+  z-index: -1;
   flex-direction: row;
   justify-content: space-between;
   padding: 1vh 2vw;
@@ -212,10 +211,6 @@ ul li a:hover {
     height: 3vh;
     background-color: transparent;
   }
-  /* #littleH1 img {
-    width: 10px;
-    height: 10px;
-  } */
   .text h1 img {
     height: 34px;
     width: 34px;
@@ -250,9 +245,6 @@ ul li a:hover {
   gap: 1vw;
   padding-left: 10px;
 }
-/* .text2 h3 {
-  color: rgba(0, 0, 71, 0.815);
-} */
 .service img {
   width: 20px;
   height: 20px;
@@ -275,6 +267,9 @@ ul li a:hover {
 #about {
   display: flex;
   flex-direction: row;
+  z-index: -2;
+  overflow: hidden;
+  position: relative;
   justify-content: space-evenly;
   height: 90vh;
   margin-top: 5.7vw;
@@ -296,10 +291,6 @@ ul li a:hover {
   padding: 33px 23px;
   background-color: rgba(0, 0, 0, 0.047);
 }
-
-/* .indication P {
-  margin-left: 10px;
-} */
 .plane {
   height: 30px;
   width: 30px;
@@ -316,27 +307,31 @@ ul li a:hover {
   width: 30px;
   height: 30px;
 }
-.container {
+.imageContainer {
   gap: 1vw;
   margin-right: 45px;
 }
-.place1 img,
-.place2 img,
-.place3 img {
-  border: 1px solid black;
+.imageContainer img {
   height: 65vh;
   width: 19vw;
   border-radius: 10px;
-  flex-shrink: 0;
 }
-.place1 {
+.place {
+  width: 19vw;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.containerSlide {
   display: flex;
-  overflow-x: hidden;
+  position: relative;
+}
+.containerSlide img {
   height: 65vh;
   width: 19vw;
-  background-color: aqua;
+  border-radius: 15px;
 }
-@keyframes translation {
+@keyframes resetAnimation {
   0% {
     transform: translateX(0);
   }
@@ -344,22 +339,20 @@ ul li a:hover {
     transform: translateX(-19vw);
   }
   66.66% {
-    transform: translateX(-38vw);
+    transform: translateX(-39vw);
   }
   100% {
-    transform: translate(0);
+    transform: translateX(0);
   }
 }
-.place1 img:hover {
-  animation: translation 2s infinite;
+.place:hover .containerSlide img {
+  animation: resetAnimation 3s;
 }
-.place2:hover {
-  transform: scale(1.1);
-}
-.place2 {
+
+.top {
   margin-top: 15px;
 }
-.featurePlace h1 {
+.featuredPlace h1 {
   margin-top: 15px;
   margin-right: 4vw;
   color: rgba(0, 0, 71, 0.815);
@@ -384,17 +377,11 @@ ul li a:hover {
   height: 25px;
   align-items: center;
 }
-/* .place {
-  margin-left: 13vw;
-  margin-top: 10px;
-}
-.place img {
-  width: 17px;
-  height: 17px;
-} */
 #journal {
   display: flex;
   flex-direction: column;
+  z-index: -2;
+  position: relative;
   gap: 2vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.047);
